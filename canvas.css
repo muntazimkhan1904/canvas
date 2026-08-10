@@ -1,0 +1,679 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Font */
+@font-face{
+    font-family: "Lemon Milk";
+    src: url("fonts/LEMONMILK-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Outfit";
+    src: url("fonts/Outfit-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: "birds of paradise";
+    src: url("fonts/Birds\ of\ Paradise\ +\ PERSONAL\ USE\ ONLY.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Body */
+body{
+    background-color: hwb(244 0% 38%);
+   
+
+    
+}
+
+/* Parent */
+.top{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1220px;
+    
+}
+
+/* Text */
+.top-opacity-1,.top-opacity-2,.top-opacity-3{
+    color: hwb(244 0% 15%);
+    font-family: "Lemon Milk", sans-serif;
+    font-size: 200px;
+    line-height: 1.1;
+    opacity: 0.1;
+    font-weight: 600;
+    width: 100%;
+    margin:0%;
+}
+.top-opacity-1{
+    color: rgb(255, 255, 255);
+    margin-left: -140px;
+}
+.top-opacity-2{
+    color: rgb(255, 255, 255);
+    margin-left: -30px;
+}
+.top-opacity-3{
+    color: rgb(255, 255, 255);
+    margin-left: -25px;
+}
+.vertical-line{
+    position: absolute;
+    top: 0;
+    left: 890px;
+    transform: translateX(-50%);
+    width: 1.5px;
+    height: 178px;
+    background-color: #fff;
+}
+.studio-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.marquee{
+    position: absolute;
+    top: 95%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;          /* Important */
+    transform: translateY(-80%);
+    z-index: 5;
+    background: #fffcfc;          /* White strip */
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-track{
+    display: flex;
+    width: max-content;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-track span{
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 550;
+    font-family: "Outfit", sans-serif;
+    color: hwb(244 0% 15%);
+    letter-spacing: 0px;
+    padding-right: 10px; /* Gap between repeats */
+}
+
+@keyframes marquee{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.overlay{
+    position:absolute;
+    left:45px;
+    top:180px;
+    z-index:20;
+    color:#ffffff;
+}
+
+.overlay h2{
+    font-family:"Outfit", sans-serif;
+    font-size:30px;
+    margin-top: -190px;
+    margin-left: 159px;
+    font-weight:300;
+}
+
+.overlay span{
+    font-family:"birds of paradise";
+    font-style:italic;
+    font-size:55px;
+    
+}
+
+.overlay .small{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns:repeat(7,max-content);
+    gap:10px;
+    font-size:11px;
+    text-transform:uppercase;
+    font-family:"Outfit", sans-serif;
+    margin-left: 158px;
+}
+.only{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: -80px;
+}
+.branding{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: -67px;
+}
+.n{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 18px;
+}
+.beautiful{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.about{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.digital{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 20px;
+}
+.you{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 2px;
+    padding-left: -2px;
+}
+.for{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.your{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 24px;
+}
+.real{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 29px;
+}
+.exploration{
+    font-family:"outfit", sans-serif;
+    font-size:11px;
+    color: #ffffff;
+    margin-left: 27px;
+}
+.branding-line{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+/* Vertical Line */
+.branding-line .line{
+    width: 2px;
+    height: 175px;
+    background: rgba(255,255,255,.95);
+
+    
+}
+
+/* Text */
+.branding-text{
+    position: absolute;
+    top: 190px;
+    left: -140px;
+
+    width: 300px;
+    margin: 0;
+
+    color: rgba(255,255,255,.8);
+
+    font-family:"Outfit", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    
+
+    line-height: 1.35;
+    /* letter-spacing: .4px; */
+    text-transform: uppercase;
+
+    text-align: left;
+}
+.circle{
+    position: absolute;
+    top: 40px;
+    left: 230px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.half-circle{
+    position: absolute;
+    top: 27%;
+    left: 26.5%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: hwb(244 0% 15%);
+}
+.home a{
+    position: absolute;
+   font-size: 12px;
+  width: 100px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+    color:#fff;
+    margin-top: -115px;
+    margin-left: 185px;
+
+}
+.client-work a{
+  position: absolute;
+  font-size: 12px;
+  width: 100px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+    color:#fff;
+    margin-top: -115px;
+    margin-left: 290px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row > div {
+    flex: 1;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+.contact-form {
+    position: absolute;
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+    self-align: center;
+    top: 100%;
+    width: 60%;
+    padding: 70px;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+.contact-form h2 ,label{
+font-family: "lemon milk", sans-serif;
+font-size: 10px;
+color: #fff;
+font-weight: 200;
+} 
+.contact-form h2{
+font-family: "lemon milk", sans-serif;
+font-size: 20px;
+color: #fff;
+font-weight: 200;
+} 
+/* =========================================
+   MOBILE - SCALE COMPLETE DESKTOP DESIGN
+   ========================================= */
+
+@media (max-width: 768px){
+
+  @media (max-width: 768px){
+
+    html,
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
+        background-color: hwb(244 0% 38%);
+    }
+
+    .top{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+       
+        min-width: 0;
+
+        margin: 0;
+        padding: 0;
+
+        overflow: hidden;
+    }
+
+    
+       .top-opacity-1,.top-opacity-2,.top-opacity-3{
+    color: hwb(244 0% 15%);
+    font-family: "Lemon Milk", sans-serif;
+    font-size: 60px;
+    line-height: 1.1;
+    opacity: 0.1;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 0px;
+}
+.top-opacity-1{
+    color: rgb(255, 255, 255);
+    margin-left: -35px;
+}
+.top-opacity-2{
+    color: rgb(255, 255, 255);
+    margin-left: -15px;
+}
+.top-opacity-3{
+    color: rgb(255, 255, 255);
+    margin-left: -10px;
+}
+        
+    }
+
+
+    .overlay{
+    
+    left:45px;
+    top:180px;
+    z-index:20;
+    color:#ffffff;
+}
+
+.overlay h2{
+    font-family:"Outfit", sans-serif;
+    font-size:10px;
+    margin-top: -219px;
+    margin-left: -27px;
+    font-weight:300;
+}
+
+.overlay span{
+    font-family:"birds of paradise";
+    font-style:italic;
+    font-size:15px;
+    
+}
+
+.overlay .small{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns:repeat(7,max-content);
+    gap:4px;
+    font-size:8px;
+    text-transform:uppercase;
+    transform: scale(0.75);
+    font-family:"Outfit", sans-serif;
+    margin-left: -60px;
+}
+
+
+.only{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: -50px;
+}
+.branding{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: -44px;
+}
+.n{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 19px;
+}
+.beautiful{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 9px;
+}
+.about{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 12px;
+}
+.digital{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 8px;
+}
+.you{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 2px;
+    padding-left: 20px;
+}
+.for{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: 5px;
+}
+.first{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: -9x;
+}
+.and{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left:-7px;
+}
+.your{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left:-2px;
+}
+.real{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: -4px;
+}
+.exploration{
+    font-family:"outfit", sans-serif;
+    font-size:8px;
+    color: #ffffff;
+    margin-left: -8px;
+}
+
+.branding-line{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+/* Vertical Line */
+.branding-line .line{
+    width: 2px;
+    height: 75px;
+    background: rgba(255,255,255,.95);
+
+    
+}
+.branding-text{
+    position: absolute;
+    top: 85px;
+    left: -30px;
+
+    width: 100px;
+    margin: 0;
+
+    color: rgba(255,255,255,.8);
+
+    font-family:"Outfit", sans-serif;
+    font-size: 4px;
+    font-weight: 500;
+    
+
+    line-height: 1.35;
+    /* letter-spacing: .4px; */
+    text-transform: uppercase;
+
+    text-align: left;
+}
+
+.circle{
+    position: absolute;
+    top: 10px;
+    left: 36px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.half-circle{
+    position: absolute;
+    top: 18%;
+    left: 20%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: hwb(244 0% 15%);
+}
+.home a{
+   font-size: 5px;
+  width: 10px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+    color:#fff;
+   margin-top: -58px;
+    margin-left: 18px;
+
+}
+.client-work a{
+  
+  font-size: 5px;
+  width: 100px;
+  font-weight: 300;
+  font-style: normal;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+    color:#fff;
+    margin-top: -58px;
+    margin-left: 60px;
+}
+
+.marquee {
+    position: absolute;
+    top: 30%;
+    left: 0;
+
+    width: 100%;
+    height: 18px;
+
+    overflow: hidden;
+
+    z-index: 5;
+    background: #fffcfc;
+
+    display: flex;
+    align-items: center;
+}
+
+.marquee-track {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-track span {
+    display: block;
+
+    white-space: nowrap;
+
+    width: max-content;
+    flex-shrink: 0;
+
+    font-size: 8px;
+    font-weight: 550;
+    font-family: "Outfit", sans-serif;
+padding-right: 0px; 
+padding-left: 0px;
+    color: hwb(244 0% 15%);
+    letter-spacing: 0;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+.contact-form {
+    
+    top: 10%;
+    width: 100%;
+    margin-top: 100px;
+    margin-left: -12px;
+}
+.contact-form h2 ,label{
+font-family: "lemon milk", sans-serif;
+font-size: 10px;
+color: #fff;
+font-weight: 200;
+} 
+.contact-form h2{
+font-family: "lemon milk", sans-serif;
+font-size: 20px;
+color: #fff;
+font-weight: 200;
+} 
+
+}
