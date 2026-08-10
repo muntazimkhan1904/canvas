@@ -669,6 +669,18 @@ color: #fff;
 font-weight: 200;
 } 
 
+.small{
+    margin-top:10px;
+    display:grid;
+    grid-template-columns:repeat(7,max-content);
+    gap:4px;
+    color: #ffffff;
+    font-size:8px;
+    text-transform:uppercase;
+    transform: scale(0.75);
+    font-family:"Outfit", sans-serif;
+
+}
 }
 
 /* =========================================================
@@ -705,7 +717,9 @@ font-weight: 200;
     }
 
     .overlay .small {
-        margin-left: -18px;
+        margin-left: -35px;
+        size : 8px;
+
     }
 
     /* Keep the small columns from escaping too far left */
