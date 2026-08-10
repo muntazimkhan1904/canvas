@@ -111,33 +111,68 @@
   <div CLASS="contact-form">
     <h2>CONTACT US</h2>
 <br>
-    <form>
-         <div>
-                <label>SUBJECT</label>
-                <input type="text" name="name" class="SUBJECT">
-            </div> <br>
-        <div class="row">
-           
-            <div>
-                <label>NAME</label>
-                <input type="text" name="name">
-            </div>
+    <form id="contactForm">
 
-            <div>
-                <label>EMAIL</label>
-                <input type="email" name="email">
-            </div>
+    <div>
+        <label>SUBJECT</label>
+        <input type="text" name="subject" class="SUBJECT" required>
+    </div>
+
+    <br>
+
+    <div class="row">
+
+        <div>
+            <label>NAME</label>
+            <input type="text" name="name" required>
         </div>
 
-        <br>
+        <div>
+            <label>EMAIL</label>
+            <input type="email" name="email" required>
+        </div>
 
-        <label>MESSAGE</label>
-        <textarea name="message"></textarea>
+    </div>
 
-        <br><br>
+    <br>
 
-        <input type="submit" value="SEND">
-    </form>
+    <label>MESSAGE</label>
+    <textarea name="message" required></textarea>
+
+    <br><br>
+
+    <input type="submit" value="SEND">
+
+</form>
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const subject = document.querySelector('[name="subject"]').value;
+    const name = document.querySelector('[name="name"]').value;
+    const email = document.querySelector('[name="email"]').value;
+    const message = document.querySelector('[name="message"]').value;
+
+    const whatsappMessage =
+`*NEW CONTACT FORM*
+
+*Subject:* ${subject}
+*Name:* ${name}
+*Email:* ${email}
+
+*Message:*
+${message}`;
+
+    const whatsappURL =
+        "https://wa.me/918806277743?text=" +
+        encodeURIComponent(whatsappMessage);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
 </div>
 </body>
 </html>
