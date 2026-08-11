@@ -523,77 +523,67 @@ label {
    MOBILE RESPONSIVE
    ========================================================= */
 
-@media (max-width: 768px) {
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
 
-    /* -----------------------------------------
-       PAGE
-       ----------------------------------------- */
- html {
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
         width: 100%;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
-
-    html::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden !important;
     }
 
     body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        background-color: hwb(244 0% 38%);
     }
 
-    body::-webkit-scrollbar {
-        display: none;
-        width: 0;
-        height: 0;
-    }
+    /* =====================================================
+       TOP
+       ===================================================== */
 
     .top {
-        position: sticky;
-        top: 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
 
         width: 100%;
         max-width: 100%;
+        min-width: 0;
 
         margin: 0;
         padding: 0;
 
-        overflow: visible !important;
-
-        z-index: 1000;
+        overflow: hidden;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        BACKGROUND TEXT
-       ----------------------------------------- */
+       ===================================================== */
 
     .top-opacity-1,
     .top-opacity-2,
     .top-opacity-3 {
-        width: max-content;
+        position: relative;
 
+        width: 100%;
+        max-width: 100%;
+
+        font-family: "Lemon Milk", sans-serif;
         font-size: 60px;
         line-height: 1.1;
 
         white-space: nowrap;
 
-        margin-top: 0;
+        margin: 0;
 
-
-
-
-
-         position: relative;
-    z-index: 1;
+        overflow: hidden;
     }
 
     .top-opacity-1 {
@@ -608,18 +598,10 @@ label {
         margin-left: -10px;
     }
 
-    /* Background words stay below the marquee layer. */
-    .top-opacity-1,
-    .top-opacity-2,
-    .top-opacity-3 {
-        position: relative;
-        z-index: 1;
-    }
 
-
-    /* -----------------------------------------
-       HERO
-       ----------------------------------------- */
+    /* =====================================================
+       HERO OVERLAY
+       ===================================================== */
 
     .overlay {
         position: absolute;
@@ -627,7 +609,14 @@ label {
         left: 45px;
         top: 180px;
 
+        width: calc(100% - 45px);
+        max-width: calc(100% - 45px);
+
         z-index: 20;
+
+        color: #fff;
+
+        overflow: visible;
     }
 
     .overlay h2 {
@@ -639,6 +628,8 @@ label {
         margin-left: -27px;
 
         font-weight: 300;
+
+        white-space: nowrap;
     }
 
     .overlay span {
@@ -650,18 +641,22 @@ label {
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        SMALL GRID
-       ----------------------------------------- */
+       ===================================================== */
 
     .overlay .small {
-        margin-top: 10px;
-
         display: grid;
 
         grid-template-columns: repeat(7, max-content);
 
         gap: 4px;
+
+        width: max-content;
+        max-width: 100%;
+
+        margin-top: 10px;
+        margin-left: -35px;
 
         font-size: 8px;
 
@@ -669,110 +664,75 @@ label {
 
         font-family: "Outfit", sans-serif;
 
-        margin-left: -35px;
-
         transform: scale(0.75);
         transform-origin: top left;
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        SMALL TEXT
-       ----------------------------------------- */
+       ===================================================== */
 
     .only {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: -30px;
     }
 
     .branding {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: -28px;
     }
 
     .n {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 19px;
     }
 
     .beautiful {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 9px;
     }
 
     .about {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 12px;
     }
 
     .digital {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 8px;
     }
 
     .you {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 2px;
         padding-left: 20px;
     }
 
     .for {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: 5px;
     }
 
     .your {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: -2px;
     }
 
     .real {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: -4px;
     }
 
     .exploration {
-        font-family: "Outfit", sans-serif;
         font-size: 8px;
-        color: #fff;
-
         margin-left: -8px;
     }
 
 
-    /* -----------------------------------------
-       BRANDING VERTICAL LINE
-       ----------------------------------------- */
+    /* =====================================================
+       BRANDING LINE
+       ===================================================== */
 
     .branding-line {
         position: absolute;
@@ -791,9 +751,9 @@ label {
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        BRANDING TEXT
-       ----------------------------------------- */
+       ===================================================== */
 
     .branding-text {
         position: absolute;
@@ -802,6 +762,7 @@ label {
         left: -30px;
 
         width: 100px;
+        max-width: 100px;
 
         margin: 0;
 
@@ -820,9 +781,9 @@ label {
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        CIRCLE
-       ----------------------------------------- */
+       ===================================================== */
 
     .circle {
         position: absolute;
@@ -853,76 +814,70 @@ label {
     }
 
 
-    /* -----------------------------------------
-       HOME
-       ----------------------------------------- */
+    /* =====================================================
+       NAVIGATION
+       ===================================================== */
 
     .home a {
         position: absolute;
 
         font-size: 5px;
 
-        width: 10px;
-
-        font-weight: 300;
-        font-style: normal;
-
-        text-decoration: none;
+        width: auto;
 
         font-family: "Outfit", sans-serif;
 
         color: #fff;
 
+        text-decoration: none;
+
         margin-top: -58px;
         margin-left: 18px;
     }
-
-
-    /* -----------------------------------------
-       CLIENT WORK
-       ----------------------------------------- */
 
     .client-work a {
         position: absolute;
 
         font-size: 5px;
 
-        width: 100px;
-
-        font-weight: 300;
-        font-style: normal;
-
-        text-decoration: none;
+        width: auto;
 
         font-family: "Outfit", sans-serif;
 
         color: #fff;
+
+        text-decoration: none;
 
         margin-top: -58px;
         margin-left: 60px;
     }
 
 
-    /* -----------------------------------------
-       MOBILE MARQUEE
-       ----------------------------------------- */
-.marquee {
-    position: absolute;
-    top: 25%;
-    left: 0;
+    /* =====================================================
+       MARQUEE
+       ===================================================== */
 
-    width: 100%;
-    height: 18px;
+    .marquee {
+        position: absolute;
 
-    overflow: hidden;
+        top: 27%;
+        left: 0;
 
-    z-index: 9999;
+        width: 100%;
+        max-width: 100%;
 
-    background: #fffcfc;
+        height: 18px;
 
-    display: flex;
-    align-items: center;
-}
+        overflow: hidden !important;
+
+        z-index: 9999;
+
+        background: #fffcfc;
+
+        display: flex;
+        align-items: center;
+    }
+
     .marquee-track {
         display: flex;
 
@@ -957,22 +912,25 @@ label {
     }
 
 
-    /* -----------------------------------------
+    /* =====================================================
        CONTACT FORM
-       ----------------------------------------- */
+       ===================================================== */
 
     .contact-form {
         position: absolute;
 
-        top: 10%;
+        top: 40%;
+
+        left: 0;
 
         width: 100%;
+        max-width: 100%;
 
-        margin-top: 100px;
-        margin-left: 0;
+        margin: 100px 0 0 0;
 
-        padding-left: 30px;
-        padding-right: 30px;
+        padding: 0 30px;
+
+        overflow: hidden;
     }
 
     .contact-form h2,
@@ -991,67 +949,149 @@ label {
     }
 
 
-    /* -----------------------------------------
-       MOBILE FORM
-       ----------------------------------------- */
+    /* =====================================================
+       FORM
+       ===================================================== */
 
     .row {
         display: flex;
+
+        width: 100%;
+        max-width: 100%;
+
         gap: 10px;
     }
 
     .row > div {
         flex: 1;
+
         min-width: 0;
+        max-width: 50%;
     }
 
     input,
     textarea {
         width: 100%;
         max-width: 100%;
+
+        box-sizing: border-box;
     }
 
+    textarea {
+        max-width: 100%;
+    }
+}
 
-    /* -----------------------------------------
-       EXTRA SMALL PHONES
-       ----------------------------------------- */
 
-    @media (max-width: 380px) {
+/* =========================================================
+   SMALL MOBILE — 320px TO 375px
+   ========================================================= */
 
-        .top-opacity-1,
-        .top-opacity-2,
-        .top-opacity-3 {
-            font-size: 55px;
-        }
+@media screen and (max-width: 375px) {
 
-        .overlay {
-            left: 40px;
-        }
+    .top {
+        width: 100%;
+        max-width: 100%;
+    }
 
-        .overlay .small {
-            transform: scale(0.68);
-        }
+    .top-opacity-1,
+    .top-opacity-2,
+    .top-opacity-3 {
+        font-size: 55px;
+    }
 
-        .branding-text {
-            width: 90px;
-            font-size: 3.5px;
-        }
+    .overlay {
+        left: 40px;
 
-        .circle {
-            left: 32px;
-        }
+        width: calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
 
-        .home a {
-            margin-left: 14px;
-        }
+    .overlay .small {
+        transform: scale(0.68);
+        transform-origin: top left;
+    }
 
-        .client-work a {
-            margin-left: 54px;
-        }
+    .circle {
+        left: 32px;
+    }
 
-        .contact-form {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+    .home a {
+        margin-left: 14px;
+    }
+
+    .client-work a {
+        margin-left: 54px;
+    }
+
+    .branding-text {
+        width: 90px;
+        max-width: 90px;
+
+        font-size: 3.5px;
+    }
+    .marquee {
+        margin-top: -10px;
+        height: 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20%;
+                  
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL — 320px
+   ========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    .top {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .overlay {
+        left: 35px;
+
+        width: calc(100% - 35px);
+        max-width: calc(100% - 35px);
+    }
+
+    .top-opacity-1,
+    .top-opacity-2,
+    .top-opacity-3 {
+        font-size: 50px;
+    }
+
+    .overlay h2 {
+        font-size: 9px;
+    }
+
+    .overlay span {
+        font-size: 14px;
+    }
+
+    .overlay .small {
+        transform: scale(0.62);
+    }
+
+    .branding-text {
+        font-size: 3px;
+    }
+.marquee{
+    margin-top: -20px;
+    height: 15px;
+}
+    .contact-form {
+        padding-top: 70px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
