@@ -23,10 +23,11 @@
 }
 
 @font-face {
-    font-family: "birds of paradise";
+    font-family: "Birds of Paradise";
     src: url("fonts/Birds of Paradise + PERSONAL USE ONLY.ttf") format("truetype");
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 /* =========================================================
@@ -131,7 +132,7 @@ html, body {
     position: absolute;
     top: 83%;
     left: 0;
-    width: 112%;
+    width: 100vw;
     height: 38px;
     z-index: 5;
     background: #fffcfc;
@@ -187,10 +188,13 @@ html, body {
     font-weight: 300;
 }
 
-.overlay span {
-    font-family: "birds of paradise";
-    font-style: italic;
+.overlay .world {
+    font-family: "Birds of Paradise", cursive;
+    font-weight: 400;
+    font-style: normal;
     font-size: 55px;
+    display: inline-block;
+    line-height: 1;
 }
 
 /* =========================================================
@@ -456,7 +460,8 @@ label {
     }
 
     .marquee {
-        top: calc(83% * (100vw / 1220));
+        top: calc(70% * (100vw / 1220));
+         width: 100%;
     }
 
     .contact-form {
@@ -586,6 +591,107 @@ label {
     color: #fff;
     margin-top: -115px;
     margin-left: 260px;
+}
+
+ .marquee {
+        top: calc(80%* (100vw / 1220));
+         width: 100%;
+    }
+
+}
+
+/* =========================================================
+   LARGE SCREENS — 2560px / 2K
+   ========================================================= */
+
+@media screen and (min-width: 1221px) {
+
+    .scale-wrapper {
+        transform: scale(calc(100vw / 1220));
+        transform-origin: top left;
+    }
+
+    .responsive-outer {
+        height: calc(100vw * 1903 / 1220);
+    }
+
+    .marquee {
+        width: 100vw;
+    }
+
+    .contact-form {
+        width: 70%;
+        margin-top:-1500px;
+        height: 1500px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+
+    .scale-wrapper {
+        transform: scale(calc(100vw / 1220));
+        transform-origin: top left;
+    }
+
+    .responsive-outer {
+        height: calc(100vw * 1903 / 1220);
+    }
+.contact-form {
+        width: 70%;
+        margin-top:-3000px;
+        height: 2800px;
+        overflow: hidden;
+    }
+
+    .circle {
+    position: absolute;
+    top: 40px;
+    left:1380px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.half-circle {
+    position: absolute;
+    top: 27%;
+    left: 26.5%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: hwb(244 0% 15%);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.home a {
+    position: absolute;
+    font-size: 12px;
+    width: 100px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    margin-top: -115px;
+    margin-left:1335px;
+}
+
+.client-work a {
+    position: absolute;
+    font-size: 12px;
+    width: 100px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    margin-top: -115px;
+    margin-left:1440px;
 }
 
 }
