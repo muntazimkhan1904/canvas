@@ -100,16 +100,42 @@
         <p class="home"><a href="#">HOME</a></p><p class="client-work"><a href="#">CLIENT WORK</a></p>
     </div>
 
-</div><!-- /.scale-wrapper -->
-</div><!-- /.responsive-outer -->
+
+
 
 <div class="marquee">
     <div class="marquee-track">
-        <span>Website is Under Maintenance • Website is Under Maintenance • Website is Under Maintenance • Website is Under Maintenance •</span>
-        <span>Website is Under Maintenance • Website is Under Maintenance • Website is Under Maintenance • Website is Under Maintenance •</span>
+        <span>
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+            </span>
+
+            <span>
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+            </span>
+            <span>
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+            </span>
+            <span>
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+                Website is Under Maintenance •
+            </span>
+
+
     </div>
 </div>
-
+</div><!-- /.scale-wrapper -->
+</div><!-- /.responsive-outer -->
 <div class="contact-form">
     <h2>CONTACT US</h2>
 <br><form id="contactForm">
@@ -174,7 +200,6 @@ ${message}`;
     window.open(whatsappURL, "_blank");
 });
 
-
 function applyScale() {
 
     const outer = document.querySelector(".responsive-outer");
@@ -183,6 +208,7 @@ function applyScale() {
     if (!outer || !wrapper) return;
 
     const designWidth = 1220;
+
     const availableWidth = outer.clientWidth;
 
     const scale = Math.min(
@@ -191,19 +217,7 @@ function applyScale() {
     );
 
     wrapper.style.transform = `scale(${scale})`;
-
-    /*
-     * Important:
-     * CSS layout height remains 1220px design size.
-     * We manually collapse the unused scaled space.
-     */
-
-    const naturalHeight = wrapper.offsetHeight;
-
-    wrapper.style.marginBottom =
-        scale < 1
-            ? `${-(naturalHeight * (1 - scale))}px`
-            : "0px";
+    wrapper.style.transformOrigin = "top left";
 }
 
 
@@ -228,7 +242,6 @@ if (outer && "ResizeObserver" in window) {
 }
 
 applyScale();
-
 
 /* =========================================================
    CONTACT FORM → WHATSAPP
