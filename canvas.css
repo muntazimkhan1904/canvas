@@ -129,10 +129,10 @@ html, body {
 
 .marquee {
     position: absolute;
-    top:-110px;
+    top: 83%;
     left: 0;
-    width: 100%;
-    height: 30px;
+    width: 112%;
+    height: 38px;
     z-index: 5;
     background: #fffcfc;
     display: flex;
@@ -223,7 +223,7 @@ html, body {
     font-family: "Outfit", sans-serif;
     font-size: 11px;
     color: #ffffff;
-    margin-left: -100px;
+    margin-left: -70px;
 }
 
 .n {
@@ -296,7 +296,7 @@ html, body {
 .branding-line {
     position: absolute;
     top: 0;
-    left: 75%;
+    left: 70%;
     transform: translateX(-50%);
 }
 
@@ -313,7 +313,7 @@ html, body {
 .branding-text {
     position: absolute;
     top: 190px;
-    left: -140px;
+    left: -90px;
     width: 300px;
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
@@ -441,170 +441,38 @@ label {
     color: #fff;
     font-weight: 200;
 }
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    width: 100%;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-.responsive-outer {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.scale-wrapper {
-    position: relative;
-    width: 1220px;
-    transform-origin: top left;
-}
 
 /* =========================================================
-   MARQUEE
+   RESPONSIVE SCALING BREAKPOINTS
+   (ONLY .scale-wrapper gets the transform now — .top and
+   .branding-line scale together as one unit, so their
+   relative positions never drift apart)
    ========================================================= */
 
-.marquee {
-    position: relative;
-    width: 100%;
-    height: 38px;
-    margin-top: 0;
-    overflow: hidden;
-    background: #fffcfc;
-    display: flex;
-    align-items: center;
-    z-index: 50;
-}
-
-.marquee-track {
-    display: flex;
-    width: max-content;
-    animation: marquee 10s linear infinite;
-}
-
-.marquee-track span {
-    display: block;
-    flex-shrink: 0;
-    white-space: nowrap;
-    width: max-content;
-    padding-right: 10px;
-
-    font-family: "Outfit", sans-serif;
-    font-size: 12px;
-    font-weight: 550;
-    color: hwb(244 0% 15%);
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
+@media screen and (max-width: 1220px) {
+    .scale-wrapper {
+        transform: scale(calc(100vw / 1220));
+        transform-origin: top left;
     }
 
-    to {
-        transform: translateX(-50%);
+    .marquee {
+        top: calc(83% * (100vw / 1220));
     }
-}
-
-/* =========================================================
-   CONTACT FORM
-   ========================================================= */
-
-.contact-form {
-    position: relative;
-    width: min(60%, 900px);
-    margin: 100px auto 0;
-    padding: 70px 0;
-}
-
-.contact-form h2,
-.contact-form label {
-    font-family: "Lemon Milk", sans-serif;
-    color: #fff;
-    font-weight: 300;
-}
-
-.contact-form h2 {
-    font-size: 20px;
-    margin: 0 0 25px;
-}
-
-.contact-form label {
-    display: block;
-    font-size: 10px;
-    margin-bottom: 6px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,.5);
-    outline: none;
-    background: transparent;
-    color: #fff;
-    font-family: "Outfit", sans-serif;
-}
-
-.contact-form textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.contact-form .row {
-    display: flex;
-    gap: 10px;
-}
-
-.contact-form .row > div {
-    flex: 1;
-}
-
-.contact-form input[type="submit"] {
-    width: auto;
-    min-width: 100px;
-    cursor: pointer;
-}
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media screen and (max-width: 600px) {
 
     .contact-form {
-        width: calc(100% - 40px);
-        margin: 50px auto 0;
-        padding: 40px 0;
+        width: 90%;
+        padding-top: -30px;
+        margin-top: 10px;
     }
 
-    .contact-form .row {
-        flex-direction: column;
-        gap: 18px;
-    }
+     /* =========================================================
+   CIRCLE
+   ========================================================= */
 
-    .contact-form h2 {
-        font-size: 18px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
-    }
-
-    .circle {
+.circle {
     position: absolute;
     top: 40px;
-    left: 142px;
+    left: 200px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -635,7 +503,7 @@ body {
     font-family: "Outfit", sans-serif;
     color: #fff;
     margin-top: -115px;
-    margin-left: 100px;
+    margin-left: 155px;
 }
 
 .client-work a {
@@ -648,20 +516,76 @@ body {
     font-family: "Outfit", sans-serif;
     color: #fff;
     margin-top: -115px;
-    margin-left: 200px;
+    margin-left: 260px;
 }
 
-.marquee {
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }
+.contact-form {
+        width: 90%;
+        padding-top: -30px;
+        margin-top: 10px;
+    }
+.responsive-outer {
+        width: 100%;
+        margin-bottom: -370px;
+    }
+    /* =========================================================
+   CIRCLE
+   ========================================================= */
+
+.circle {
     position: absolute;
-    top:32%;
-    left: 0;
-    width: 100%;
-    height: 25px;
-    z-index: 5;
-    background: #fffcfc;
-    display: flex;
-    align-items: center;
+    top: 40px;
+    left: 200px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
 }
 
+.half-circle {
+    position: absolute;
+    top: 27%;
+    left: 26.5%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: hwb(244 0% 15%);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.home a {
+    position: absolute;
+    font-size: 12px;
+    width: 100px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    margin-top: -115px;
+    margin-left: 155px;
+}
+
+.client-work a {
+    position: absolute;
+    font-size: 12px;
+    width: 100px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    color: #fff;
+    margin-top: -115px;
+    margin-left: 260px;
+}
 
 }
