@@ -24,9 +24,9 @@
 
 @font-face {
     font-family: "Birds of Paradise";
-    src: url("fonts/Birds of Paradise + PERSONAL USE ONLY.ttf") format("truetype");
-    font-weight: 600;
-    font-style: normal;
+    src: url("fonts/birdsofparadise.ttf") format("truetype");
+    font-weight: 300;
+    font-style: regular;
     font-display: swap;
 }
 
@@ -190,11 +190,12 @@ html, body {
 
 .overlay .world {
     font-family: "Birds of Paradise";
-    font-weight: 600;
+    font-weight: 300;
     font-style: normal;
-    font-size: 65px;
+    font-size: 55px;
     display: inline-block;
     line-height: 1;
+    margin-left: 5px;
 }
 
 /* =========================================================
