@@ -622,7 +622,9 @@ label {
     .contact-form {
         width: 70%;
         margin-top:-1500px;
+        margin-bottom: 0px;
         height: 1500px;
+        padding-bottom: 0px;
         overflow: hidden;
     }
 }
@@ -692,6 +694,27 @@ label {
     color: #fff;
     margin-top: -115px;
     margin-left:1440px;
+}
+.branding-line .line {
+    width: 2px;
+    height: 175px;
+    margin-left: 380px;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.branding-text {
+    position: absolute;
+    top: 190px;
+    left: 290px;
+    width: 300px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Outfit", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 }
