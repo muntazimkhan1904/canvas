@@ -189,10 +189,10 @@ html, body {
 }
 
 .overlay .world {
-    font-family: "Birds of Paradise", cursive;
-    font-weight: 700;
+    font-family: "Birds of Paradise";
+    font-weight: 600;
     font-style: normal;
-    font-size: 60px;
+    font-size: 65px;
     display: inline-block;
     line-height: 1;
 }
